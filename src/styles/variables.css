@@ -1,0 +1,15 @@
+:root {
+  --primary-blue: #257897;
+  --secondary-blue: #237595;
+  --hover-blue: #50A5C6;
+  --background-body: #eee;
+  --white: #FFFFFF;
+  --black: #000000;
+
+  --bold: 600;
+  --f10: 10px;
+  --f13: 13px;
+  --f14: 14px;
+  --f16: 16px;
+  --f18: 18px;
+}

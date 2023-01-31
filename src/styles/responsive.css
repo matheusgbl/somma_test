@@ -1,0 +1,59 @@
+@import "variables.css";
+
+@media (max-width: 1200px) {
+  header.desktop .menu li a {
+    font-size: 11px;
+    padding: 0 7px;
+  }
+  
+  header.desktop .menu {
+    width: calc(100% - 450px);
+  }
+
+  header.desktop .conta {
+    width: 200px;
+  }
+  
+  .container {
+    padding: 30px 60px;
+  }
+  
+  #card {
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 993px) {
+  header.desktop {
+    display: none;
+  }
+
+  header.mobile {
+    display: block;
+  }
+}
+
+@media (max-width: 425px) {
+  .container {
+    padding: 20px;
+  }
+  
+  .container h1 {
+    text-align: center;
+  }
+
+  #card {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  #card .card__info .card__text {
+    font-size: var(--f14);
+    line-height: 25px;
+    line-height: 30px;
+  }
+
+  .sidenav {
+    width: 100%;
+  }
+}

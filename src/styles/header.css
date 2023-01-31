@@ -1,0 +1,286 @@
+@import "variables.css";
+
+@keyframes showItem {
+  from {
+    opacity: 0;
+    transform: translate3d(50px, 0, 0);
+    height: 20%;
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    height: 100%;
+  }
+}
+
+header.desktop {
+  height: 105px;
+  width: 100%;
+}
+
+header.inv.desktop nav.gradiente, header.inv.desktop nav.cor {
+  background: var(--secondary-blue);
+}
+
+header.desktop nav {
+  padding: 0 35px;
+}
+
+header.desktop .logo {
+  float: left;
+  height: 105px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+}
+
+header.desktop .menu {
+  float: left;
+  height: 105px;
+  width: calc(100% - 500px);
+  text-align: center;
+}
+
+header.desktop .menu li {
+  list-style: none;
+  height: 105px;
+  padding: 0;
+  display: inline-flex;
+  margin: 0;
+  vertical-align: middle;
+  align-items: center;
+}
+
+header.desktop .menu li a {
+    color: var(--white);
+    font-size: var(--f13);
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0 20px;
+    display: block;
+}
+
+header.inv.desktop .menu li a:hover {
+  color: var(--hover-blue);
+}
+
+header.desktop .conta {
+  float: left;
+  height: 105px;
+  width: 250px;
+  text-align: right;
+  padding: 14px 0;
+}
+
+header.desktop .conta li {
+  list-style: none;
+}
+
+header.desktop .conta li a.a {
+  background: var(--white);
+  color: var(--primary-blue);
+}
+
+header.desktop .conta li a {
+  font-size: var(--f10);
+  color: var(--white);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid #FFF;
+  text-decoration: none;
+  width: 130px;
+  height: 30px;
+  margin: 4px 0;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 0 15px;
+  transition: all 0.2s ease;
+}
+
+header.desktop .conta li a:hover {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid var(--white);
+}
+
+header.desktop .conta li:last-child a:hover {
+  background: var(--white);
+  color: var(--black);
+  border: 1px solid var(--white);
+}
+
+header.inv.mobile {
+  background: var(--primary-blue);
+}
+
+header.mobile {
+  display: none;
+  height: 69px;
+}
+
+header.mobile nav {
+  padding: 0 20px;
+}
+
+header.mobile .logo {
+  float: left;
+  height: 69px;
+  width: calc(100% - 40px);
+  padding: 9px 0 0;
+}
+
+header.mobile a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+header.mobile .logo img {
+  height: 51px;
+}
+
+header.mobile .sanduiche {
+  float: left;
+  height: 69px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidenav {
+  display: none;
+  height: 100%;
+  width: 400px;
+  position: fixed;
+  z-index: 400;
+  top: 0;
+  right: 0;
+  background: #EBEBEB;
+  overflow-x: hidden;
+  text-align: left;
+  opacity: 1;
+  -webkit-overflow-scrolling: touch;
+  animation-name: showItem;
+  animation-duration: 0.5s;
+}
+
+.inv.sidenav .top {
+  background: #257897;
+}
+
+.sidenav .top {
+  height: 69px;
+  padding: 0 20px;
+}
+
+.sidenav .top .logo {
+  float: left;
+  height: 69px;
+  width: calc(100% - 40px);
+  padding: 9px 0 0;
+}
+
+.sidenav .top .logo img {
+  height: 51px;
+}
+
+.sidenav .top .fechar {
+  float: left;
+  height: 69px;
+  width: 40px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidenav .menu {
+  padding: 15px 30px;
+}
+
+.sidenav .menu li {
+  list-style: none;
+}
+
+.inv.sidenav .menu li a {
+  color: var(--primary-blue);
+}
+
+.sidenav .menu li a {
+  font-size: 16px;
+  padding: 15px 0;
+  font-family: 'PN_Bold', sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  font-weight: var(--bold);
+}
+
+.inv.sidenav .menu li a:after {
+  background: var(--primary-blue);
+}
+.sidenav .menu li a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 20px;
+}
+
+.sidenav .conta {
+  border-top: 1px solid #D8D8D8;
+  padding: 15px 30px;
+}
+
+.inv.sidenav .conta a.a {
+  color: var(--white);
+  background: var(--primary-blue);
+  border: 1px solid var(--primary-blue);
+}
+
+.sidenav .conta a {
+  font-size: 10px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 145px;
+  height: 40px;
+  margin: 4px 0;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 0 15px;
+}
+
+.inv.sidenav .conta a.b {
+  color: var(--primary-blue);
+  background: transparent;
+  border: 1px solid var(--primary-blue);
+}
+
+.sidenav .conheca {
+  border-top: 1px solid #D8D8D8;
+  padding: 15px 30px;
+}
+
+.inv.sidenav .conheca p {
+  color: #4B646F;
+}
+
+.sidenav .conheca p {
+  font-size: 14px;
+  font-family: 'PN_Bold';
+  margin: 0 0 5px;
+}
+
+.sidenav .conheca a {
+  margin: 4px 0;
+}
