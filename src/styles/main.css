@@ -1,0 +1,153 @@
+:root {
+  --primary-blue: #257897;
+  --secondary-blue: #237595;
+  --hover-blue: #50A5C6;
+  --background-body: #eee;
+  --white: #FFFFFF;
+  --black: #000000;
+  --bold: 600;
+  --f10: 10px;
+  --f13: 13px;
+  --f16: 16px;
+  --f18: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-body);
+}
+
+header.desktop {
+  height: 105px;
+  width: 100%;
+}
+
+header.inv.desktop nav.gradiente, header.inv.desktop nav.cor {
+  background: var(--secondary-blue);
+}
+
+header.desktop nav {
+  padding: 0 35px;
+}
+
+header.desktop .logo {
+  float: left;
+  height: 105px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+}
+
+header.desktop .menu {
+  float: left;
+  height: 105px;
+  width: calc(100% - 500px);
+  text-align: center;
+}
+
+header.desktop .menu li {
+  list-style: none;
+  height: 105px;
+  padding: 0;
+  display: inline-flex;
+  margin: 0;
+  vertical-align: middle;
+  align-items: center;
+}
+
+header.desktop .menu li a {
+    color: var(--white);
+    font-size: var(--f13);
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0 20px;
+    display: block;
+}
+
+header.inv.desktop .menu li a:hover {
+  color: var(--hover-blue);
+}
+
+header.desktop .conta {
+  float: left;
+  height: 105px;
+  width: 250px;
+  text-align: right;
+  padding: 14px 0;
+}
+
+header.desktop .conta li {
+  list-style: none;
+}
+
+header.desktop .conta li a.a {
+  background: var(--white);
+  color: var(--primary-blue);
+}
+
+header.desktop .conta li a {
+  font-size: var(--f10);
+  color: var(--white);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid #FFF;
+  text-decoration: none;
+  width: 130px;
+  height: 30px;
+  margin: 4px 0;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 0 15px;
+  transition: all 0.2s ease;
+}
+
+header.desktop .conta li a:hover {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid var(--white);
+}
+
+header.desktop .conta li:last-child a:hover {
+  background: var(--white);
+  color: var(--black);
+  border: 1px solid var(--white);
+}
+
+.container {
+  padding: 40px 100px;
+}
+
+#card {
+  background-color: var(--white);
+  border: 2px solid var(--primary-blue);
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: calc(100% / 3);
+  margin: 0 auto;
+}
+
+#card .card__info {
+  width: 100%;
+  height: 100%;
+}
+
+#card .card__info .card__text-info {
+  text-align: center;
+  color: var(--secondary-blue);
+  font-size: var(--f18);
+  font-weight: var(--bold);
+  margin: 10px 0;
+}
