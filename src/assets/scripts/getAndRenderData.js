@@ -13,7 +13,7 @@ let dataList;
 let dataInfo;
 
 const login = () => {
-  $.ajax({
+  return $.ajax({
     type: "POST",
     url: loginURL,
     data: {
@@ -29,7 +29,7 @@ const login = () => {
 };
 
 if (localStorage.getItem("token") === null) {
-  login();
+  await login();
 }
 
 const getListAPI = () => {
@@ -38,14 +38,10 @@ const getListAPI = () => {
     url: assessmentListURL,
     contentType: "application/x-www-form-urlencoded",
     success: function (response) {
-      localStorage.getItem("token");
       dataList = response.DADOS;
     },
-    beforeSend: function (xhr, settings) {
-      xhr.setRequestHeader(
-        "Authorization",
-        "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpbnN0aXR1dGlvbiI6MTEzOSwic3ViIjoicm9ueSIsImFjY2VzcyI6MjIxNDk3MCwiYWdlbmN5IjoxOSwiZXhwIjoxNjcwNzI0MzM1LCJ1c2VySWQiOjExNDcsImF1dGhvcml0aWVzIjpbIlJPTEVfQUNUVUFUT1IiLCJST0xFX1BBVFRFUk5TIl19.wSunuaC6iQkxEFcckDGzE3lFeI2lQXnFffy0FZWK8V-5945z1GMHzeeqknWajiT-F0wKlKKBZ7phfBBaLTfREA"
-      );
+    beforeSend: function (xhr) {
+      xhr.setRequestHeader("Authorization", localStorage.getItem("token"));
     },
   });
 };
@@ -56,14 +52,10 @@ const getDataAPI = () => {
     url: assessmentDataURL,
     contentType: "application/x-www-form-urlencoded",
     success: function (response) {
-      localStorage.getItem("token");
       dataInfo = response.DADOS;
     },
-    beforeSend: function (xhr, settings) {
-      xhr.setRequestHeader(
-        "Authorization",
-        "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpbnN0aXR1dGlvbiI6MTEzOSwic3ViIjoicm9ueSIsImFjY2VzcyI6MjIxNDk3MCwiYWdlbmN5IjoxOSwiZXhwIjoxNjcwNzI0MzM1LCJ1c2VySWQiOjExNDcsImF1dGhvcml0aWVzIjpbIlJPTEVfQUNUVUFUT1IiLCJST0xFX1BBVFRFUk5TIl19.wSunuaC6iQkxEFcckDGzE3lFeI2lQXnFffy0FZWK8V-5945z1GMHzeeqknWajiT-F0wKlKKBZ7phfBBaLTfREA"
-      );
+    beforeSend: function (xhr) {
+      xhr.setRequestHeader("Authorization", localStorage.getItem("token"));
     },
   });
 };

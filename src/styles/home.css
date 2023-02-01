@@ -31,8 +31,8 @@
 }
 
 #card .card__info .card__text-info {
-  text-align: center;
-  color: var(--hover-blue);
+  text-align: left;
+  color: var(--primary-blue);
   font-size: var(--f18);
   font-weight: var(--bold);
   margin: 20px 0;
@@ -44,6 +44,6 @@
 }
 
 #card .card__info .card__text .primary-text {
-  color: var(--secondary-blue);
+  color: var(--hover-blue);
   font-weight: var(--bold);
 }
